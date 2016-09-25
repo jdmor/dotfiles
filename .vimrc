@@ -35,6 +35,9 @@ Plug 'majutsushi/tagbar'
 
 " Search tool
 Plug 'mileszs/ack.vim'
+
+" Status toolbar
+Plug 'vim-airline/vim-airline'
 call plug#end()
 
 " Remove trailing whitespace before saving a file
@@ -51,6 +54,9 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 nnoremap <leader>p :CtrlPFunky<CR>
 nnoremap <leader>k :NERDTree<CR>
+
+" Configure airline status bar
+let g:airline_powerline_fonts = 1
 
 " Set  colors
 highlight nonText ctermfg=240
