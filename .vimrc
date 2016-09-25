@@ -50,6 +50,7 @@ let mapleader = ","
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 nnoremap <leader>p :CtrlPFunky<CR>
+nnoremap <leader>k :NERDTree<CR>
 
 " Set  colors
 highlight nonText ctermfg=240
