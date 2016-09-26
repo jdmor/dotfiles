@@ -1,10 +1,7 @@
 
 export NVM_DIR="/Users/jona/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-eval "$(rbenv init -)"
 
-export PATH="$PATH:/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin"
 export PATH="$PATH:$HOME/bin"
 export TERM="xterm-256color"
 
