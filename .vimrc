@@ -35,6 +35,7 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'majutsushi/tagbar'
 
 " Search tool
+" dependency: ack. Install via homebrew
 Plug 'mileszs/ack.vim'
 
 " Status toolbar

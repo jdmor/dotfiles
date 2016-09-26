@@ -10,4 +10,5 @@ ln -sfv ~/.dotfiles/.ctags ~/.ctags
 # Install the following packages using homebrew
 # vim
 # ctags
+# ack
 # the_silver_searcher / ag
