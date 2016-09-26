@@ -7,7 +7,7 @@ export TERM="xterm-256color"
 
 export HISTCONTROL=ignoreboth
 export HISTIGNORE="history:pwd"
-export LESS='-M'
+export LESS='-MR'
 
 # Set editor variables
 export VISUAL=vim
