@@ -57,7 +57,7 @@ let mapleader = ","
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 nnoremap <leader>p :CtrlPFunky<CR>
-nnoremap <leader>k :NERDTree<CR>
+nnoremap <leader>k :NERDTreeToggle<CR>
 
 " Configure airline status bar
 let g:airline_powerline_fonts = 1
