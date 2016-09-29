@@ -1,20 +1,33 @@
 set listchars+=space:␣,eol:¬,tab:>.
 set list
 
-" show existing tab with 2 spaces width
-set tabstop=2
+" --- Leader Shortcuts ---
+let mapleader=","
 
-" when indenting with '>', use 2 space width
-set shiftwidth=2
+" --- Spaces and Tabs ---
+set tabstop=2    " number of visual spaces per TAB
+set shiftwidth=2 " use 2 spaces when indenting with >>
 
-" Highlight search text
-set hls
+" --- UI Config ---
+set number     " show line numbers
+set cursorline " highlight current line
+set wildmenu   " visual autocomplete for commmand menu
+set lazyredraw " redraw only when we need to
+set showmatch  " highlight matching [{()}]
+
+" --- Searching ---
+set incsearch " search as characters are entered
+set hlsearch  " highlight matches
+
+" --- Movement ---
+" move vertically by visual line
+nnoremap j gj
+nnoremap k gk
+" highlight last inserted text
+nnoremap gV `[v`]
 
 " Treat all numbers as decimal, regardless if there are leading zeros
 set nrformats=
-
-" Show line numbers
-set number
 
 " Use junegunn/vim-plug to manage vim packages
 call plug#begin()
@@ -53,7 +66,6 @@ if executable('ag')
 endif
 
 " Key mapping
-let mapleader=","
 let g:ctrlp_map='<c-p>'
 let g:ctrlp_cmd='CtrlP'
 nnoremap <leader>p :CtrlPFunky<CR>
