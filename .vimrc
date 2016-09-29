@@ -49,18 +49,20 @@ autocmd BufWritePre * %s/\s\+$//e
 " Use ag for Ack
 " dependency: the_silver_searcher / ag
 if executable('ag')
-  let g:ackprg = 'ag --vimgrep'
+  let g:ackprg='ag --vimgrep'
 endif
 
 " Key mapping
-let mapleader = ","
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
+let mapleader=","
+let g:ctrlp_map='<c-p>'
+let g:ctrlp_cmd='CtrlP'
 nnoremap <leader>p :CtrlPFunky<CR>
+
+" Remap NERDTree commands
 nnoremap <leader>k :NERDTreeToggle<CR>
 
 " Configure airline status bar
-let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts=1
 
 " Set colors
 highlight nonText ctermfg=240
