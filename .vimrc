@@ -56,6 +56,12 @@ Plug 'mileszs/ack.vim'
 Plug 'vim-airline/vim-airline'
 call plug#end()
 
+" --- CtrlP settings ---
+" show results from top to bottom
+let g:ctrlp_match_window='bottom,order:ttb'
+" use ag to search, which is much faster
+let g:ctrlp_user_command='ag %s -l --nocolor -g ""'
+
 " Remove trailing whitespace before saving a file
 autocmd BufWritePre * %s/\s\+$//e
 
