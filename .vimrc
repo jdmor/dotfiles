@@ -56,6 +56,9 @@ Plug 'mileszs/ack.vim'
 " Status toolbar
 " dependency: powerline font to properly display symbols
 Plug 'vim-airline/vim-airline'
+
+" Git stuff
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 " --- CtrlP settings ---
