@@ -70,8 +70,9 @@ let g:ctrlp_user_command='ag %s -l --nocolor -g ""'
 " Remove trailing whitespace before saving a file
 autocmd BufWritePre * %s/\s\+$//e
 
+" --- Ack settings ---
+nnoremap <leader>/ :Ack!<space>
 " Use ag for Ack
-" dependency: the_silver_searcher / ag
 if executable('ag')
   let g:ackprg='ag --vimgrep'
 endif
