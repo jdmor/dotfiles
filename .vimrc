@@ -74,7 +74,7 @@ autocmd BufWritePre * %s/\s\+$//e
 nnoremap <leader>/ :Ack!<space>
 " Use ag for Ack
 if executable('ag')
-  let g:ackprg='ag --vimgrep'
+  let g:ackprg='ag -i --vimgrep --nocolor'
 endif
 
 " Key mapping
