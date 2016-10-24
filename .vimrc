@@ -90,6 +90,7 @@ nnoremap <leader>k :NERDTreeToggle<CR>
 
 " Configure airline status bar
 let g:airline_powerline_fonts=1
+let g:airline_section_c = '%t' " only show file name
 
 " Set colors
 highlight nonText ctermfg=240
