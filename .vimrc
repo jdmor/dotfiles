@@ -1,4 +1,4 @@
-set listchars+=space:␣,eol:¬,tab:>.
+set listchars+=eol:¬,tab:>.
 set list
 
 " --- Leader Shortcuts ---
