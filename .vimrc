@@ -14,6 +14,8 @@ set cursorline " highlight current line
 set wildmenu   " visual autocomplete for commmand menu
 set lazyredraw " redraw only when we need to
 set showmatch  " highlight matching [{()}]
+set splitbelow " open new vertical split to the bottom
+set splitright " open new horizontal split to the right
 
 " --- Searching ---
 set incsearch " search as characters are entered
