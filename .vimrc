@@ -94,8 +94,8 @@ let g:ctrlp_prompt_mappings={'AcceptSelection("h")': ['<c-h>']}
 
 " Remap NERDTree commands
 nnoremap <leader>k :NERDTreeToggle<CR>
-let g:NERDTreeMapOpenVSplit='v'
-let g:NERDTreeMapOpenSplit='h'
+let g:NERDTreeMapOpenVSplit='<c-v>'
+let g:NERDTreeMapOpenSplit='<c-h>'
 
 " Configure airline status bar
 let g:airline_powerline_fonts=1
