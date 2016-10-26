@@ -90,10 +90,12 @@ let g:ctrlp_cmd='CtrlP'
 nnoremap <leader>p :CtrlPFunky<CR>
 
 " Remap CtrlP commands
-let g:ctrlp_prompt_mappings={'AcceptSelection("h")': ['<c-i>']}
+let g:ctrlp_prompt_mappings={'AcceptSelection("h")': ['<c-h>']}
 
 " Remap NERDTree commands
 nnoremap <leader>k :NERDTreeToggle<CR>
+let g:NERDTreeMapOpenVSplit='v'
+let g:NERDTreeMapOpenSplit='h'
 
 " Configure airline status bar
 let g:airline_powerline_fonts=1
