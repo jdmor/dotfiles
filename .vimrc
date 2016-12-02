@@ -88,10 +88,10 @@ endif
 let g:ctrlp_map='<c-p>'
 let g:ctrlp_cmd='CtrlP'
 nnoremap <leader>p :CtrlPFunky<CR>
+nnoremap <leader>b :CtrlPBuffer<CR>
 
 " Remap CtrlP commands
 let g:ctrlp_prompt_mappings={'AcceptSelection("h")': ['<c-h>']}
-
 " Remap NERDTree commands
 nnoremap <leader>k :NERDTreeToggle<CR>
 let g:NERDTreeMapOpenVSplit='<c-v>'
