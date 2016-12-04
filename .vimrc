@@ -113,9 +113,15 @@ nnoremap <leader>k :NERDTreeToggle<CR>
 let g:NERDTreeMapOpenVSplit='<c-v>'
 let g:NERDTreeMapOpenSplit='<c-h>'
 
-" Configure airline status bar
+" Customize airline status bar
 let g:airline_powerline_fonts=1
-let g:airline_section_c = '%t' " only show file name
+let g:airline_section_a='' " don't show vim mode
+let g:airline_section_c='' " don't show file name as it's displayed in the tabline extension
+let g:airline_section_z='%l/%L:%c' " show current line / total lines : column number
+let g:airline#extensions#tabline#enabled=1 " enable tabline extension
+let g:airline#extensions#tabline#show_tab_type=0 " don't show the tab type
+let g:airline#extensions#tabline#left_sep=''
+let g:airline#extensions#tabline#left_alt_sep='│'
 
 " Set color scheme
 set background=dark
