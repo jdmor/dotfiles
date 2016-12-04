@@ -74,9 +74,14 @@ Plug 'mileszs/ack.vim'
 " Status toolbar
 " dependency: powerline font to properly display symbols
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " Git stuff
 Plug 'tpope/vim-fugitive'
+
+" Solarized color theme and toggle bg
+Plug 'altercation/vim-colors-solarized'
+
 call plug#end()
 
 " --- CtrlP settings ---
@@ -112,8 +117,10 @@ let g:NERDTreeMapOpenSplit='<c-h>'
 let g:airline_powerline_fonts=1
 let g:airline_section_c = '%t' " only show file name
 
-" Set colors
-highlight nonText ctermfg=240
-highlight SpecialKey ctermfg=240
-highlight Comment ctermfg=245
-highlight LineNr ctermfg=245
+" Set color scheme
+set background=dark
+let g:solarized_bold=0
+colorscheme solarized
+
+" Map toggle bg command
+call togglebg#map("<F5>")
