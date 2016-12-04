@@ -79,6 +79,9 @@ Plug 'vim-airline/vim-airline-themes'
 " Git stuff
 Plug 'tpope/vim-fugitive'
 
+" Show git diff in gutter
+Plug 'airblade/vim-gitgutter'
+
 " Solarized color theme and toggle bg
 Plug 'altercation/vim-colors-solarized'
 
