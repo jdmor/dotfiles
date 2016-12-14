@@ -39,6 +39,9 @@ vnoremap <silent> # :<C-U>
 " move vertically by visual line
 nnoremap j gj
 nnoremap k gk
+" move vertically by line number
+nnoremap J j
+nnoremap K k
 " highlight last inserted text
 nnoremap gV `[v`]
 " easier split navigation
