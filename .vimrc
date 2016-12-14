@@ -9,7 +9,8 @@ set tabstop=2    " number of visual spaces per TAB
 set shiftwidth=2 " use 2 spaces when indenting with >>
 
 " --- UI Config ---
-set number     " show line numbers
+set number     " show current line number
+set rnu        " show relative line numbers
 set cursorline " highlight current line
 set wildmenu   " visual autocomplete for commmand menu
 set lazyredraw " redraw only when we need to
