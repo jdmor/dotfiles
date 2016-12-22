@@ -89,7 +89,33 @@ Plug 'airblade/vim-gitgutter'
 " Solarized color theme and toggle bg
 Plug 'altercation/vim-colors-solarized'
 
+" Sub mode awesomeness
+Plug 'kana/vim-submode'
+
 call plug#end()
+
+" --- Split resize  ---
+let g:submode_timeout = 0 " disable submode timeouts
+let g:submode_keep_leaving_key = 1 " don't consume submode-leaving key
+
+call submode#enter_with('split-resize', 'n', '', '<C-w><', '10<C-w><')
+call submode#enter_with('split-resize', 'n', '', '<C-w>>', '10<C-w>>')
+call submode#enter_with('split-resize', 'n', '', '<C-w>+', '5<C-w>+')
+call submode#enter_with('split-resize', 'n', '', '<C-w>-', '5<C-w>-')
+
+" quick resize
+call submode#map('split-resize', 'n', '', '<', '10<C-w><')
+call submode#map('split-resize', 'n', '', '>', '10<C-w>>')
+call submode#map('split-resize', 'n', '', '+', '5<C-w>+')
+call submode#map('split-resize', 'n', '', '-', '5<C-w>-')
+
+" other resize
+call submode#map('split-resize', 'n', '', '_', '<C-w>_')
+call submode#map('split-resize', 'n', '', '<bar>', '<C-w><bar>')
+call submode#map('split-resize', 'n', '', '=', '<C-w>=')
+
+" old way, just in case.
+nnoremap <Leader>w <C-w>
 
 " --- CtrlP settings ---
 " show results from top to bottom
@@ -115,6 +141,7 @@ nnoremap <leader>b :CtrlPBuffer<CR>
 
 " Remap CtrlP commands
 let g:ctrlp_prompt_mappings={'AcceptSelection("h")': ['<c-h>']}
+
 " Remap NERDTree commands
 nnoremap <leader>k :NERDTreeToggle<CR>
 let g:NERDTreeMapOpenVSplit='<c-v>'
