@@ -37,3 +37,8 @@ fi
 
 # Pretty git prompt
 export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\] \[\033[33;1m\]\W\[\033[m\] (\$(git branch 2>/dev/null | grep '^*' | colrm 1 2)) \$ "
+
+# Change color scheme
+export COLORSCHEME='dark'
+alias dark='echo -e "\033]50;SetProfile=DarkProfile\a"; COLORSCHEME="dark"'
+alias light='echo -e "\033]50;SetProfile=LightProfile\a"; COLORSCHEME="light"'
