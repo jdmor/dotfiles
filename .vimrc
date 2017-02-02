@@ -92,6 +92,9 @@ Plug 'altercation/vim-colors-solarized'
 " Sub mode awesomeness
 Plug 'kana/vim-submode'
 
+" Debugger
+Plug 'joonty/vdebug'
+
 call plug#end()
 
 " --- Split resize  ---
