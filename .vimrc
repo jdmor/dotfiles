@@ -160,6 +160,15 @@ let g:airline#extensions#tabline#show_tab_type=0 " don't show the tab type
 let g:airline#extensions#tabline#left_sep=''
 let g:airline#extensions#tabline#left_alt_sep='│'
 
+" Debugger config
+if !exists("g:vdebug_options")
+	let g:vdebug_options = {}
+endif
+let g:vdebug_options["path_maps"] = {
+	\ '/home/pixieset/public/pixieset.com/public/pixieset/app/': $HOME . '/dev/pixieset/app/',
+	\ '/home/pixieset/public/pixieset.com/public/pixieset/framework/': $HOME . '/dev/pixieset/framework/'
+	\}
+
 " Set color scheme
 if $COLORSCHEME == 'light'
 	set background=light
