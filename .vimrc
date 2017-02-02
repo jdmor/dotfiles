@@ -161,7 +161,11 @@ let g:airline#extensions#tabline#left_sep=''
 let g:airline#extensions#tabline#left_alt_sep='│'
 
 " Set color scheme
-set background=dark
+if $COLORSCHEME == 'light'
+	set background=light
+else
+	set background=dark
+endif
 let g:solarized_bold=0
 colorscheme solarized
 
