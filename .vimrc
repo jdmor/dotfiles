@@ -169,7 +169,7 @@ let g:vdebug_options["path_maps"] = {
 	\ '/home/pixieset/public/pixieset.com/public/pixieset/framework/': $HOME . '/dev/pixieset/framework/'
 	\}
 
-" Set color scheme
+" Set initial color scheme
 if $COLORSCHEME == 'light'
 	set background=light
 else
@@ -178,5 +178,12 @@ endif
 let g:solarized_bold=0
 colorscheme solarized
 
-" Map toggle bg command
-call togglebg#map("<F5>")
+" Switch color mode commands
+function! Dark()
+	set background=dark
+endfunction
+function! Light()
+	set background=light
+endfunction
+command! Dark call Dark()
+command! Light call Light()
