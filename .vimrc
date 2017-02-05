@@ -4,6 +4,9 @@ set list
 " --- Leader Shortcuts ---
 let mapleader=","
 
+" # Set env variables
+let $BASH_ENV="~/.bash_aliases"
+
 " --- Spaces and Tabs ---
 set tabstop=2    " number of visual spaces per TAB
 set shiftwidth=2 " use 2 spaces when indenting with >>
