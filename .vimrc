@@ -98,6 +98,9 @@ Plug 'kana/vim-submode'
 " Debugger
 Plug 'joonty/vdebug'
 
+" Vim/tmux navigation
+Plug 'christoomey/vim-tmux-navigator'
+
 call plug#end()
 
 " --- Split resize  ---
