@@ -101,6 +101,10 @@ Plug 'joonty/vdebug'
 " Vim/tmux navigation
 Plug 'christoomey/vim-tmux-navigator'
 
+" Syntax plugins
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+
 call plug#end()
 
 " --- Split resize  ---
@@ -203,3 +207,6 @@ if &term =~ '256color'
 	" see also http://snk.tuxfamily.org/log/vim-256color-bce.html
 	set t_ut=
 endif
+
+" vim-jsx config
+let g:jsx_ext_required = 0
