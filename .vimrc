@@ -176,7 +176,7 @@ let g:vdebug_options["path_maps"] = {
 	\}
 
 " Set initial color scheme
-let colorMode = system('echo -e "tell application \"iTerm\"\n\ttell current session of current window\n\t\tname\n\tend tell\nend tell" | osascript')
+let colorMode = system('echo -e "tell application \"iTerm2\"\n\ttell current session of current window\n\t\tname\n\tend tell\nend tell" | osascript')
 if colorMode =~ 'LightProfile.*'
 	set background=light
 else
