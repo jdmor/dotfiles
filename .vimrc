@@ -213,3 +213,10 @@ endif
 
 " vim-jsx config
 let g:jsx_ext_required = 0
+
+" emmet-vim config
+let g:user_emmet_settings = {
+\	'javascript.jsx' : {
+\		'extends' : 'jsx',
+\	},
+\}
