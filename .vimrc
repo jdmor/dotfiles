@@ -105,6 +105,9 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 
+" Code snippet expander
+Plug 'mattn/emmet-vim'
+
 call plug#end()
 
 " --- Split resize  ---
