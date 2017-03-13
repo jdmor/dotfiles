@@ -58,6 +58,14 @@ nnoremap <leader>m `
 " Treat all numbers as decimal, regardless if there are leading zeros
 set nrformats=
 
+" File type config
+if has('autocmd')
+	filetype plugin indent on " load plugin files and indent files specific to the file type on FileType event
+endif
+if has('syntax') && !exists('g:syntax_on')
+	syntax enable
+endif
+
 " Use junegunn/vim-plug to manage vim packages
 call plug#begin()
 Plug 'tpope/vim-sensible'
