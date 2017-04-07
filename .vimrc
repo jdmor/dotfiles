@@ -118,6 +118,9 @@ Plug 'mxw/vim-jsx'
 " Code snippet expander
 Plug 'mattn/emmet-vim'
 
+" Linters
+Plug 'joonty/vim-phpqa'
+
 call plug#end()
 
 " --- Split resize  ---
@@ -231,3 +234,7 @@ let g:user_emmet_settings = {
 \		'extends' : 'jsx',
 \	},
 \}
+
+" vim-phpqa config
+let g:phpqa_codesniffer_args = "--standard=Pixieset"
+let g:phpqa_messdetector_autorun = 1 " Don't run messdetector
