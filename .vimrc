@@ -139,6 +139,7 @@ call submode#map('split-resize', 'n', '', '-', '5<C-w>-')
 call submode#map('split-resize', 'n', '', '_', '<C-w>_')
 call submode#map('split-resize', 'n', '', '<bar>', '<C-w><bar>')
 call submode#map('split-resize', 'n', '', '=', '<C-w>=')
+nnoremap <C-w>z <C-w>_<C-w><bar> " maximize split
 
 " old way, just in case.
 nnoremap <Leader>w <C-w>
