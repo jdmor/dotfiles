@@ -237,4 +237,4 @@ let g:user_emmet_settings = {
 
 " vim-phpqa config
 let g:phpqa_codesniffer_args = "--standard=Pixieset"
-let g:phpqa_messdetector_autorun = 1 " Don't run messdetector
+let g:phpqa_messdetector_autorun = 0 " Don't run messdetector
