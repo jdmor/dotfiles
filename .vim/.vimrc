@@ -21,6 +21,8 @@ set showmatch  " highlight matching [{()}]
 set splitbelow " open new vertical split to the bottom
 set splitright " open new horizontal split to the right
 
+" nnoremap zV ggzf'<'>zfG
+
 " --- Searching ---
 set incsearch " search as characters are entered
 set hlsearch  " highlight matches
@@ -66,116 +68,8 @@ if has('syntax') && !exists('g:syntax_on')
 	syntax enable
 endif
 
-" Use junegunn/vim-plug to manage vim packages
-call plug#begin()
-Plug 'tpope/vim-sensible'
-
-" Display directory in sidebar
-Plug 'scrooloose/nerdtree'
-
-" Full path fuzzy file, buffer, mru, tag ... finder for Vim
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'tacahiroy/ctrlp-funky'
-
-" Auto update tags
-" Make sure ctags is installed
-Plug 'ludovicchabant/vim-gutentags'
-
-" Display file's current tags in sidebar
-Plug 'majutsushi/tagbar'
-
-" Search tool
-" dependency: ack. Install via homebrew
-Plug 'mileszs/ack.vim'
-
-" Status toolbar
-" dependency: powerline font to properly display symbols
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-
-" Git stuff
-Plug 'tpope/vim-fugitive'
-
-" Show git diff in gutter
-Plug 'airblade/vim-gitgutter'
-
-" Solarized color theme and toggle bg
-Plug 'altercation/vim-colors-solarized'
-
-" Sub mode awesomeness
-Plug 'kana/vim-submode'
-
-" Debugger
-Plug 'joonty/vdebug'
-
-" Vim/tmux navigation
-Plug 'christoomey/vim-tmux-navigator'
-
-" Syntax plugins
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
-
-" Code snippet expander
-Plug 'mattn/emmet-vim'
-
-" Linters
-Plug 'joonty/vim-phpqa'
-
-call plug#end()
-
-" --- Split resize  ---
-let g:submode_timeout = 0 " disable submode timeouts
-let g:submode_keep_leaving_key = 1 " don't consume submode-leaving key
-
-call submode#enter_with('split-resize', 'n', '', '<C-w><', '10<C-w><')
-call submode#enter_with('split-resize', 'n', '', '<C-w>>', '10<C-w>>')
-call submode#enter_with('split-resize', 'n', '', '<C-w>+', '5<C-w>+')
-call submode#enter_with('split-resize', 'n', '', '<C-w>-', '5<C-w>-')
-
-" quick resize
-call submode#map('split-resize', 'n', '', '<', '10<C-w><')
-call submode#map('split-resize', 'n', '', '>', '10<C-w>>')
-call submode#map('split-resize', 'n', '', '+', '5<C-w>+')
-call submode#map('split-resize', 'n', '', '-', '5<C-w>-')
-
-" other resize
-call submode#map('split-resize', 'n', '', '_', '<C-w>_')
-call submode#map('split-resize', 'n', '', '<bar>', '<C-w><bar>')
-call submode#map('split-resize', 'n', '', '=', '<C-w>=')
-nnoremap <C-w>z <C-w>_<C-w><bar> " maximize split
-
-" old way, just in case.
-nnoremap <Leader>w <C-w>
-
-" --- CtrlP settings ---
-" show results from top to bottom
-let g:ctrlp_match_window='bottom,order:ttb'
-" use ag to search, which is much faster
-let g:ctrlp_user_command='ag %s -l --nocolor -g ""'
-
 " Remove trailing whitespace before saving a file
 autocmd BufWritePre * %s/\s\+$//e
-
-" --- Ack settings ---
-nnoremap <leader>/ :Ack!<space>
-" Use ag for Ack
-if executable('ag')
-  let g:ackprg='ag -i --vimgrep --nocolor'
-endif
-
-" Key mapping
-let g:ctrlp_map='<c-p>'
-let g:ctrlp_cmd='CtrlP'
-nnoremap <leader>p :CtrlPFunky<CR>
-nnoremap <leader>b :CtrlPBuffer<CR>
-
-" Remap CtrlP commands
-let g:ctrlp_prompt_mappings={'AcceptSelection("h")': ['<c-h>']}
-
-" Remap NERDTree commands
-nnoremap <leader>k :NERDTreeToggle<CR>
-let g:NERDTreeMapOpenVSplit='<c-v>'
-let g:NERDTreeMapOpenSplit='<c-h>'
 
 " Customize airline status bar
 let g:airline_powerline_fonts=1
@@ -234,7 +128,3 @@ let g:user_emmet_settings = {
 \		'extends' : 'jsx',
 \	},
 \}
-
-" vim-phpqa config
-let g:phpqa_codesniffer_args = "--standard=Pixieset"
-let g:phpqa_messdetector_autorun = 0 " Don't run messdetector
