@@ -7,6 +7,9 @@ let mapleader=","
 " # Set env variables
 let $BASH_ENV="~/.bash_aliases"
 
+" Fix system clipboard copy/paste in macOS High Seirra
+set clipboard=unnamed
+
 " --- Spaces and Tabs ---
 set tabstop=2    " number of visual spaces per TAB
 set shiftwidth=2 " use 2 spaces when indenting with >>
