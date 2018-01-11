@@ -1,3 +1,6 @@
+# Use vi key bindings
+set -o vi
+
 # Expand aliases
 shopt -s expand_aliases
 
