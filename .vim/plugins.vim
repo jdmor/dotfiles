@@ -69,11 +69,10 @@ Plug 'christoomey/vim-tmux-navigator'
 
 " ---
 
-" Syntax plugins
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
+" Code snippet expander
+Plug 'mattn/emmet-vim'
 
 " ---
 
-" Code snippet expander
-Plug 'mattn/emmet-vim'
+" Collection of language packs for Vim
+Plug 'sheerun/vim-polyglot'
